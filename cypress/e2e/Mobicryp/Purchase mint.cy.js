@@ -34,7 +34,7 @@ describe(
         cy.wait(300);
         cy.reload();
 
-        cy.contains("Mint").should('be visible').click(); // Expand the Minting menu
+        cy.contains("Mint").last().click(); // Expand the Minting menu
         cy.contains('Mint Purchase').click(); // Click on Mint Purchase
     
         // Verify the URL
