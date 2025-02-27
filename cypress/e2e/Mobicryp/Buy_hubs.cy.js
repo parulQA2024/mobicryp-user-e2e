@@ -7,7 +7,7 @@ describe(
   () => {
     it("should log in and redirect to the dashboard", () => {
       cy.visit("https://mobicryp-demo-uat.crypquesupport.com/login");
-      cy.get(`input[name="email"]`).type("MC400001");
+      cy.get(`input[name="email"]`).type("g@gmail.com");
       cy.get(`input[name="password"]`).type("Password@123");
 
       cy.get("button").contains("Login").click();
@@ -18,9 +18,7 @@ describe(
 
       cy.get(`input[name="pin"]`).type("1234");
 
-      //cy.contains('button', 'Submit').click();
-      // cy.get(`input[class="flex items-center"]`).contains('Hub').click();
-      // cy.get(`input[class="flex items-center gap-2"]`).contains('Buy Hub').click();
+      
       cy.contains("Hub").click();
       cy.contains("Buy Hub").click();
 

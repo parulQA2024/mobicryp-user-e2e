@@ -1,8 +1,8 @@
 describe(
   "Login and Redirection Test",
   {
-    viewportHeight: 1920,
-    viewportWidth: 1080,
+    viewportHeight: 1080,
+    viewportWidth: 1920,
   },
   () => {
     it("should log in and redirect to the dashboard", () => {
