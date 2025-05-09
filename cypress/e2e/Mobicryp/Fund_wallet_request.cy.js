@@ -5,7 +5,7 @@ describe(
       viewportWidth: 1920,
     },
     () => {
-      it("should sent funt request", () => {
+      it("should sent fun request", () => {
         cy.visit("https://mobicryp-demo-uat.crypquesupport.com/login");
         cy.get(`input[name="email"]`).type("MC400001");
         cy.get(`input[name="password"]`).type("Password@123");

@@ -6,7 +6,7 @@ describe(
   },
   () => {
     it("should log in and redirect to the dashboard", () => {
-      cy.viewport(600,1000);
+      cy.viewport(1920,1080);
 
       cy.visit("https://mobicryp-demo-uat.crypquesupport.com/login");
       cy.get(`input[name="email"]`).type("g@gmail.com");
