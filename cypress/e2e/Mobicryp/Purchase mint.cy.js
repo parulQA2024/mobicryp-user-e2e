@@ -17,9 +17,9 @@ describe(
   
         cy.get(`input[name="pin"]`).type("1234");
   
-      // cy.contains('button', 'Submit').click();
-      //   // cy.get(`input[class="flex items-center"]`).contains('Hub').click();
-      //   // cy.get(`input[class="flex items-center gap-2"]`).contains('Buy Hub').click();
+      //   cy.contains('button', 'Submit').click();
+      //   cy.get(`input[class="flex items-center"]`).contains('Hub').click();
+      //   cy.get(`input[class="flex items-center gap-2"]`).contains('Buy Hub').click();
       //   cy.contains("Hub").click();
       //   cy.contains("Buy Hub").click();
   
@@ -28,7 +28,7 @@ describe(
       //   cy.get(`input[name="otp"]`).type("4152");
       //   cy.wait(300)
       //   cy.contains('button','Confirm').click();
-      // //   cy.get("input[name]").click();
+      //   cy.get("input[name]").click();
       //   cy.wait(300);
       //   cy.reload()
 
@@ -45,24 +45,27 @@ describe(
         cy.contains('Others').should('be.visible');
 
     
-        // Select "Myself" for the "Topup Wallet for" option
+        // "Myself" for the "Topup Wallet for" option
         cy.contains('Myself').click();
-        cy.contains('Select Hub for Capacity').click();
-        cy.wait(1000); 
-       // cy.get(.space-y-2).click();
-        //cy.contains('Basic | Total Capacity : $ 300 | Remaining Capacity : $ 300 ',{ force: true }).click();
-
-        cy.get('select').select('Basic | Total Capacity : $ 300 | Remaining Capacity : $ 300 ',{ force: true }).should('have.value', '24');
-
-        // cy.get('input[placeholder="Enter the HUB Capacity"]').type('150'); // Replace placeholder with the actual value if different
-    
+        // cy.contains('Select Hub for Capacity').click();
+        // cy.wait(1000);
+        // cy.get(.space-y-2).click();
+        // cy.contains(`select[tabindex="-1"]`).should('have.value', '1');
+        //cy.get('select').select({ force: true }).should('have.value', '2');
+        cy.wait(1000);
+        // cy.get('button[role="combobox"]');
+        // cy.get('select[tabindex="-1"]').should('have.value', '2').select('2',{click:true});
+        cy.get(`span[style="pointer-events: none;"]`).click( {force: true});
+        cy.wait(1000);
+        cy.get('.space-y-2');
+        // cy.contains('Basic | Total Capacity : $ 300 | Remaining Capacity : $ 150 ');
         
+
         // cy.contains('Self').click();
 
         // cy.contains("Enter OTP").click();
         // cy.get(`input[name="otp"]`).type("4152");
-        // cy.wait(300)
+        // cy.wait(300);
         // cy.contains('button','Purchase').click();
- 
       })
 });
